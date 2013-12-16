@@ -1,0 +1,32 @@
+//
+// Prefix header for all source files of the 'ImageProcessingTest2' target in the 'ImageProcessingTest2' project
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_4_0
+#warning "This project uses features only available in iOS SDK 4.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+    #import <Social/Social.h>
+
+#define DLog(...) NSLog(@"%s:%d %@", __PRETTY_FUNCTION__, __LINE__, [NSString stringWithFormat:__VA_ARGS__])
+#define ALog(...) [[NSAssertionHandler currentHandler] handleFailureInFunction:[NSString stringWithCString:__PRETTY_FUNCTION__ encoding:NSUTF8StringEncoding] file:[NSString stringWithCString:__FILE__ encoding:NSUTF8StringEncoding] lineNumber:__LINE__ description:__VA_ARGS__]
+#define likely(x)       __builtin_expect((x),1)
+#define unlikely(x)     __builtin_expect((x),0)
+
+#define ASTReturnRA(object) return( [[object retain] autorelease] )
+#define ASTAllocIA(aClass) [[[aClass alloc] init] autorelease]
+#endif
+
+
+#define scrollViewHeight 60
+#define degreesToRadians(x) (M_PI * x / 180.0)
+#define MAX_SIZE 600    
+#define MIN_SIZE 100
+#define MAX_SIZE_IPAD 2000    
+#define MIN_SIZE_IPAD 100
+#define appPurchaseId @"com.djmobile.framesPack1"
